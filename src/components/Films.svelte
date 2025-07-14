@@ -1,7 +1,25 @@
 <script>
+  import { onMount } from "svelte";
   import SectionLabel from "./SectionLabel.svelte";
   export let label = {};
   export let filmsData = [];
+
+  onMount(async () => {
+    const res = await fetch('https://swapi.py4e.com/api/films/')
+    const data = await res.json();
+
+    filmsData = data.results
+      .map(film => ({
+        name: film.title,
+        director: film.director,
+        date: formatDate(film.release_date)
+      }))
+  });
+
+  function formatDate(dateStr) {
+    const [year, month, day] = dateStr.split('-');
+    return `${day}.${month}.${year}`;
+  }
 </script>
 
 <section id="films" class="films-section position-relative w-75 mx-auto">
