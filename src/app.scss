@@ -1,0 +1,17 @@
+@import "bootstrap/scss/bootstrap";
+
+
+$font-family: 'Open Sans', sans-serif;
+$font-weight: 500;
+
+:root {
+  --main-btn-color: #1f304a;
+  --main-btn-color-hover: #193b6e;
+  --cover-img: url('/assets/landing-image.png');
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: $font-weight;
+}

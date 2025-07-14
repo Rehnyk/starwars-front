@@ -1,0 +1,90 @@
+{
+  "labels": {
+    "about": {
+      "number": "01",
+      "title": "About Us"
+    },
+    "films": {
+      "number": "02",
+      "title": "Films"
+    },
+    "comments": {
+      "number": "03",
+      "title": "Comments"
+    }
+  },
+  "about": [
+    {
+      "image": "/assets/about1.png",
+      "alt": "Jedi",
+      "heading": "Created by Jedi",
+      "text": "Pellentesque arcu. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    },
+    {
+      "image": "assets/about2.png",
+      "alt": "Republic",
+      "heading": "Something about old republic",
+      "text": "Pellentesque arcu. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    },
+    {
+      "image": "assets/about3.png",
+      "alt": "Senate",
+      "heading": "What is Galactic Senate?",
+      "text": "Pellentesque arcu. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    }
+  ],
+  "films": [
+    {
+      "name": "A New Hope",
+      "director": "George Lucas",
+      "date": "25.5.1977"
+    },
+    {
+      "name": "Attack of the Clones",
+      "director": "George Lucas",
+      "date": "16.5.2002"
+    },
+    {
+      "name": "The Phantom Menace",
+      "director": "George Lucas",
+      "date": "19.5.1999"
+    },
+    {
+      "name": "Revenge of the Sith",
+      "director": "George Lucas",
+      "date": "19.5.2005"
+    },
+    {
+      "name": "The Empire Strikes Back",
+      "director": "Irvin Kershner",
+      "date": "17.5.1980"
+    },
+    {
+      "name": "Return of the Jedi",
+      "director": "Richard Marquand",
+      "date": "25.5.1983"
+    }
+  ],
+  "comments": [
+    {
+      "time": "2024-07-08T12:30:00Z",
+      "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Nulla facilisi. Etiam sit amet fringilla lacus. Morbi fermentum arcu at diam gravida, ac tempor velit tincidunt."
+    },
+    {
+      "time": "2024-07-07T09:00:00Z",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Suspendisse potenti. Curabitur sit amet eros a libero hendrerit feugiat. Nullam blandit, justo at pulvinar ultrices, nisi libero tempor metus, a gravida sapien dolor vel felis. In hac habitasse platea dictumst. Quisque non sapien non lacus sodales faucibus id nec nisl. Fusce fringilla, metus vel scelerisque viverra, nisi nunc bibendum metus, nec tincidunt quam nisl id libero."
+    },
+    {
+      "time": "2024-07-06T15:45:00Z",
+      "text": "Pellentesque habitant morbi tristique."
+    },
+    {
+      "time": "2024-07-05T20:15:00Z",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu."
+    },
+    {
+      "time": "2024-07-04T08:00:00Z",
+      "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Nulla facilisi. Etiam sit amet fringilla lacus. Morbi fermentum arcu at diam gravida, ac tempor velit tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Suspendisse potenti. Curabitur sit amet eros a libero hendrerit feugiat. Nullam blandit, justo at pulvinar ultrices, nisi libero tempor metus, a gravida sapien dolor vel felis. In hac habitasse platea dictumst. Quisque non sapien non lacus sodales faucibus id nec nisl. Fusce fringilla, metus vel scelerisque viverra, nisi nunc bibendum metus, nec tincidunt quam nisl id libero."
+    }
+  ]
+}
