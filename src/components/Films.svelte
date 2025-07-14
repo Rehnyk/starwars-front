@@ -5,19 +5,18 @@
   export let filmsData = [];
 
   onMount(async () => {
-    const res = await fetch('https://swapi.py4e.com/api/films/')
+    const res = await fetch("https://swapi.py4e.com/api/films/");
     const data = await res.json();
 
-    filmsData = data.results
-      .map(film => ({
-        name: film.title,
-        director: film.director,
-        date: formatDate(film.release_date)
-      }))
+    filmsData = data.results.map((film) => ({
+      name: film.title,
+      director: film.director,
+      date: formatDate(film.release_date),
+    }));
   });
 
   function formatDate(dateStr) {
-    const [year, month, day] = dateStr.split('-');
+    const [year, month, day] = dateStr.split("-");
     return `${day}.${month}.${year}`;
   }
 </script>
@@ -52,7 +51,7 @@
   }
 
   .table td {
-    padding: 0.2rem 0;
+    padding: 0.2rem;
   }
 
   .film-name-col {
@@ -67,6 +66,12 @@
 
     td {
       padding: 0.8rem 0.6rem 0.8rem 0;
+    }
+  }
+
+  @media (max-width: 570px) {
+    .films-section {
+      width: 100% !important;
     }
   }
 </style>

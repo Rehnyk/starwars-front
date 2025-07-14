@@ -21,6 +21,8 @@ V dalším kroku jsem implementovala dynamické načítání seznamu filmů pomo
 
 Doporučené API bohužel není funkční, ale našla jsem alternativu na `https://swapi.py4e.com`
 
+## 3. fáze – Interaktivní mapa
+Do projektu jsem integrovala knihovnu **Leaflet.js**. Mapa zobrazuje marker s popupem a červeným kruhem dle zadání.
 
 ## Použité technologie
 * **Svelte** - framework pro strukturu a logiku aplikace
@@ -28,6 +30,7 @@ Doporučené API bohužel není funkční, ale našla jsem alternativu na `https
 * **FontAwesome** - ikony
 * **Vite** - bundler a nástroj pro vývojové prostředí
 * **Swapi API** - REST API s daty o filmech
+* **Leaflet.js** – mapa s markery
 
 
 
