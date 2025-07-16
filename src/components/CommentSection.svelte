@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import SectionLabel from "./SectionLabel.svelte";
+  import { relativeTimeFormat } from "../utils/relativeTime.js";
 
   export let label = {};
   export let commentsData = [];
@@ -10,7 +11,8 @@
   let error = "";
 
   let showAll = false;
-  const visibleCount = 2;
+  const visibleCount = 3;
+  let commentSection;
 
   $: comments = [...userComments, ...commentsData].sort(
     // @ts-ignore
@@ -18,6 +20,14 @@
   );
 
   $: visibleComments = showAll ? comments : comments.slice(0, visibleCount);
+
+  function toggleComments() {
+    showAll = !showAll;
+
+    if (!showAll && commentSection) {
+      commentSection.scrollIntoView();
+    }
+  }
 
   onMount(() => {
     const stored = localStorage.getItem("userComments");
@@ -40,27 +50,17 @@
     localStorage.setItem("userComments", JSON.stringify(userComments));
     commentText = "";
   }
-
-  function formatDate(isoString) {
-    if (!isoString) return "";
-    const date = new Date(isoString);
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const year = date.getFullYear();
-    return `${day}.${month}.${year}`;
-  }
 </script>
 
 <section id="comments" class="comments-section position-relative w-75 mx-auto">
   <SectionLabel number={label.number} title={label.title} />
 
   <div class="container">
-    <div class="card p-5 comment-input-card shadow rounded-0 border-0">
+    <div class="comment-input-card p-5 shadow rounded-0 border-0">
+      {#if error}
+        <div class="text-danger small ms-3">{error}</div>
+      {/if}
       <div class="d-flex align-items-center">
-        {#if error}
-          <small class="text-danger error-text position-absolute"
-            >At least 3 characters required</small>
-        {/if}
         <textarea
           name="write-comment"
           class="comment-textarea form-control border-0 border-bottom rounded-0 shadow-none mt-4"
@@ -78,7 +78,10 @@
       </div>
     </div>
 
-    <h3 class="text-uppercase fs-5 text-muted py-4 m-4">
+    <h3
+      class="text-uppercase fs-5 text-muted py-4 m-4"
+      bind:this={commentSection}
+    >
       Comments: {comments.length}
     </h3>
 
@@ -86,7 +89,7 @@
       {#each visibleComments as comment}
         <div class="comment-card p-4 mb-5 shadow">
           <small class="text-muted comment-date"
-            >{formatDate(comment.time)}</small
+            >{relativeTimeFormat(comment.time)}</small
           >
           <p class="mt-3 mb-0 comment-text">{comment.text}</p>
         </div>
@@ -96,8 +99,8 @@
     {#if comments.length > visibleCount}
       <div class="text-center">
         <button
-          class="btn btn-outline-secondary rounded-0 shadow-sm"
-          on:click={() => (showAll = !showAll)}
+          class="btn btn-outline-secondary rounded-0 shadow-sm px-5"
+          on:click={toggleComments}
         >
           {showAll ? "Show Less" : "Show More"}
         </button>
@@ -116,7 +119,6 @@
   }
 
   .comment-send-btn {
-    margin-left: -3rem;
     font-size: 3rem;
   }
 
@@ -124,9 +126,13 @@
     color: #9e9e9e !important;
   }
 
-  .error-text {
-    top: 2.5rem;
-    left: 3.5rem;
-    font-size: 0.8rem;
+  @media (max-width: 650px) {
+    .comments-section {
+      width: 100% !important;
+    }
+
+    .comment-input-card {
+      padding: 1.5rem 1rem !important;
+    }
   }
 </style>

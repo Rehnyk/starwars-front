@@ -10,7 +10,7 @@
 <section id="about" class="about-section position-relative w-75 mx-auto">
   <SectionLabel number={label.number} title={label.title} />
 
-  <div class="about-box container shadow bg-white p-5">
+  <div class="about-box container shadow p-5">
     <div class="row justify-content-between g-4">
       {#each aboutData as item}
         <div class="col-12 col-md-4 col-lg-3 text-start">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="d-flex justify-content-center mt-4">
-      <MainButton label="Contact Us" link="#map" />
+      <MainButton label="Contact Us" link="#contact" />
     </div>
   </div>
 </section>
@@ -42,5 +42,15 @@
 
   .min-heading-height {
     min-height: 2.5rem;
+  }
+
+  @media (max-width: 650px) {
+    .about-section {
+      width: 100% !important;
+    }
+
+    .about-box {
+      width: 95% !important;
+    }
   }
 </style>

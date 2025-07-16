@@ -11,6 +11,10 @@
     "comments": {
       "number": "03",
       "title": "Comments"
+    },
+    "contact": {
+      "number": "04",
+      "title": "Contact Us"
     }
   },
   "about": [
@@ -67,15 +71,15 @@
   ],
   "comments": [
     {
-      "time": "2024-07-08T12:30:00Z",
+      "time": "2025-07-08T12:30:00Z",
       "text": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Nulla facilisi. Etiam sit amet fringilla lacus. Morbi fermentum arcu at diam gravida, ac tempor velit tincidunt."
     },
     {
-      "time": "2024-07-07T09:00:00Z",
+      "time": "2025-07-07T09:00:00Z",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Suspendisse potenti. Curabitur sit amet eros a libero hendrerit feugiat. Nullam blandit, justo at pulvinar ultrices, nisi libero tempor metus, a gravida sapien dolor vel felis. In hac habitasse platea dictumst. Quisque non sapien non lacus sodales faucibus id nec nisl. Fusce fringilla, metus vel scelerisque viverra, nisi nunc bibendum metus, nec tincidunt quam nisl id libero."
     },
     {
-      "time": "2024-07-06T15:45:00Z",
+      "time": "2025-01-06T15:45:00Z",
       "text": "Pellentesque habitant morbi tristique."
     },
     {

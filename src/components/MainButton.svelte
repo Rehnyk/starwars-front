@@ -5,7 +5,7 @@
 
 <a
   href={link}
-  class="btn d-inline-flex align-items-center text-uppercase text-white fw-medium p-3 shadow gap-5 main-btn rounded-0"
+  class="main-btn btn d-inline-flex align-items-center text-uppercase text-white fw-medium p-3 shadow gap-5 rounded-0"
 >
   {label}
   <span class="arrow ms-5"></span>

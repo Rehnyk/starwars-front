@@ -2,34 +2,38 @@
   import { onMount } from "svelte";
   import L from "leaflet";
   import "leaflet/dist/leaflet.css";
+  import customIcon from "/assets/V-marker.png";
 
   let map;
 
-  const lat = 50.42;
-  const lng = 16.168;
+  const markerCoords = [50.4204, 16.1683];
+  const circleCoords = [50.38, 16.07];
 
-  const markerCoords = [50.42, 16.168];
-  const circleCoords = [50.08, 14.43];
+  const customMarker = L.icon({
+    iconUrl: customIcon,
+    iconSize: [40, 40],
+    popupAnchor: [0, -15],
+  });
 
   onMount(() => {
-    map = L.map("map").setView(markerCoords, 8);
+    map = L.map("map").setView(markerCoords, 10);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 20,
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-    const marker = L.marker(markerCoords).addTo(map);
-    marker.bindPopup("<b>Náchod</b><br>I am a pop up").openPopup();
+    const marker = L.marker(markerCoords, { icon: customMarker }).addTo(map);
+    marker.bindPopup("<b>Level Systems</b><br>Náchod").openPopup();
 
     L.circle(circleCoords, {
       color: "red",
       fillColor: "#f03",
       fillOpacity: 0.3,
-      radius: 7000,
+      radius: 2000,
     })
       .addTo(map)
-      .bindPopup("<b>Praha</b><br>I am the circle.");
+      .bindPopup("<b>Rozkoš</b><br>Vodní nádrž");
   });
 </script>
 

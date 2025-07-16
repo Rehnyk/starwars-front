@@ -37,4 +37,11 @@
     background: #ffffff;
     clip-path: polygon(0 0, 35% 95%, 100% 0, 100% 100%, 0% 100%);
   }
+
+  @media (max-width: 400px) {
+    .cover-content p {
+      text-align: center !important;
+      margin-top: -0.2rem;
+    }
+  }
 </style>

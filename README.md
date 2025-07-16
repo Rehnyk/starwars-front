@@ -30,9 +30,24 @@ Do projektu jsem integrovala knihovnu **Leaflet.js**. Mapa zobrazuje marker s po
 
 ## Fáze 4 – Komentáře v localStorage a validací
 
-V poslední fázi jsem umožnila přidávání komentářů,  které jsou ukládány do localStorage. Zahrnuta je také validace na minimálně 3 znaky.
+V této fázi jsem umožnila přidávání komentářů,  které jsou ukládány do localStorage. Zahrnuta je také validace na minimálně 3 znaky.
 
 Součástí *Comment section* je také toggle tlačítko pro zobrazení více či méně komentářů (implementováno již ve fázi 1).
+
+## Fáze 5 - Kontaktní formulář, services, scroll up a další
+Toto je poslední fáze projektu kde byly provedeny finální úpravy a přidáno několik komponentů a funkcí nad rámec původního zadání.
+
+1. **Kontaktní formulář** - Kontaktní formulář se základní validací napojený na navigaci a odpovídající servisní logiku.
+
+2. **Services** -  Pro komentáře i kontaktní formulář byly vytvořeny vlastní servisy. U obou je implementována metoda HTTP POST, u komentářů navíc metoda GET pro jejich načítání. Vzhledem k absenci backendového serveru není aplikace propojena s žádnou databází.
+
+3. **Scroll to Top** – Přidáno tlačítko pro plynulé posunutí stránky zpět na začátek.
+
+4. **Mapový marker** – V produkční verzi se nezobrazoval defaultní marker Leaflet.js, proto jsem vytvořila vlastní marker načítaný přímo ze složky assets.
+
+5. **Relativní čas** – Pro výpočet relativního času u komentářů byla použita knihovna Day.js.
+
+6. **Zlepšení responzivity a doladění detailů** – U některých prvků byla upravena responzivita a byly doladěny drobné nedostatky.
 
 
 ## Použité technologie
@@ -42,6 +57,7 @@ Součástí *Comment section* je také toggle tlačítko pro zobrazení více č
 * **Vite** - bundler a nástroj pro vývojové prostředí
 * **Swapi API** - REST API s daty o filmech
 * **Leaflet.js** – mapa s markery
+* **Day.js** - výpočet relativního času
 
 
 
